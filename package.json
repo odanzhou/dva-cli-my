@@ -3,8 +3,9 @@
   "scripts": {
     "start": "roadhog server",
     "build": "roadhog build",
-    "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint"
+    "lint:es": "eslint --ext .js src mock test",
+    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "antd": "^3.17.0",
@@ -23,7 +24,15 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.12.0",
+    "lint-staged": "^8.1.6",
     "redbox-react": "^1.4.3",
-    "roadhog": "^2.5.0-beta.4"
+    "roadhog": "^2.5.0-beta.4",
+    "tslint": "^5.16.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["tslint --fix", "git add"],
+    "*.{js,jsx}": ["eslint --fix", "git add"]
   }
 }
