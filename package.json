@@ -13,6 +13,8 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
     "babel-plugin-dva-hmr": "^0.3.2",
     "eslint": "^4.14.0",
     "eslint-config-umi": "^0.1.1",

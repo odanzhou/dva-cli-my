@@ -11,7 +11,8 @@ const app = dva();
 // app.model(require('./models/example').default);
 
 // 4. Router
-app.router(require('./router').default);
+import Router from './router'
+app.router(Router);
 
 // 5. Start
 app.start('#root');
