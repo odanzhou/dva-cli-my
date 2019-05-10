@@ -1,5 +1,5 @@
-import React from 'react';
-import { connect } from 'dva';
+import React from 'react'
+import { connect } from 'dva'
 import styles from './IndexPage.css'
 
 function IndexPage() {
@@ -16,6 +16,6 @@ function IndexPage() {
 }
 
 IndexPage.propTypes = {
-};
+}
 
-export default connect()(IndexPage);
+export default connect()(IndexPage)
