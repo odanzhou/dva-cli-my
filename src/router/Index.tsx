@@ -1,6 +1,6 @@
-import React from 'react';
-import { Router, Route, Switch } from 'dva/router';
-import IndexPage from './routes/IndexPage'
+import React from 'react'
+import { Router, Route, Switch } from 'dva/router'
+import IndexPage from '../pages/Index/IndexPage'
 
 function RouterConfig({ history }: any) {
   return (
@@ -9,7 +9,7 @@ function RouterConfig({ history }: any) {
         <Route path="/" exact component={IndexPage} />
       </Switch>
     </Router>
-  );
+  )
 }
 
 export default RouterConfig

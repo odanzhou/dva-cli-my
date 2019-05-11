@@ -6,7 +6,7 @@ const Example = () => {
       Example
     </div>
   );
-};
+}
 
 Example.propTypes = {
 }
