@@ -1,4 +1,4 @@
-import fetch from 'dva/fetch'
+import { default as fetch } from 'dva/fetch'
 
 interface RequestInit {
   body?: BodyInit | null;
