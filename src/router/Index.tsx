@@ -1,12 +1,13 @@
 import React from 'react'
-import { Router, Route, Switch } from 'dva/router'
-import IndexPage from '../pages/Index/IndexPage'
+import { Router, Switch } from 'dva/router'
+import { renderRoutes } from "react-router-config"
+import routes from './routes'
 
 function RouterConfig({ history }: any) {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" exact component={IndexPage} />
+        {renderRoutes(routes)}
       </Switch>
     </Router>
   )
