@@ -1,18 +1,26 @@
-import dva from 'dva'
-import './index.css'
+import dva from 'dva';
+import createLoading from 'dva-loading';
+import example from './models/example';
+import Router from './router/Index';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
 // 1. Initialize
-const app = dva()
+const app = dva();
 
 // 2. Plugins
-// app.use({});
+app.use(createLoading());
 
 // 3. Model
-// app.model(require('./models/example').default);
+app.model(example);
 
 // 4. Router
-import Router from './router/Index'
-app.router(Router)
+app.router(Router);
 
 // 5. Start
-app.start('#root')
+app.start('#root');
+
+serviceWorker.unregister();
