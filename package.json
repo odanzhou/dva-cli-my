@@ -8,8 +8,8 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "antd": "^3.17.0",
-    "dva": "^2.4.1",
+    "antd": "^3.19.1",
+    "dva": "^2.6.0-beta.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-config": "^5.0.0"
